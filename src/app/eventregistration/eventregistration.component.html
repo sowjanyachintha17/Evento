@@ -1,0 +1,121 @@
+        <app-sidebar></app-sidebar>
+
+
+        <div class="content-wrapper" style="min-height: 1416.81px;">
+                <section class="content-header">
+                        <div class="container-fluid">
+                                <div class="row mb-2">
+                                        <div class="col-sm-6">
+                                                <h1>Event Registration</h1>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+                <section class="content" style="margin-left:10rem">              
+                        <div [hidden]="submitted">
+                                <form (ngSubmit)="onSubmit()" >
+                                        <div class="row">
+                                                <div class="col-md-8">
+                                                        <div class="card card-primary">
+                                                                <div class="card-header">
+                                                                        <h3 class="card-title">Registration Form</h3>
+                                                                        <!-- <h4 align="center">Event Registration</h4> -->
+                                                                        <div class="card-tools">
+                                                                                <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">-
+                                                                                </button>
+                                                                        </div>
+                                                                </div>
+                                                                                                                        
+                                                                <div class="card-body">
+                                                                        <div class="row"> 
+                                                                                <div class="col-sm-6">     
+                                                                                        <div class = "form-group">
+                                                                                                <label for = "Course"> Course:  </label>
+                                                                                                <input type = "text" class = "form-control"  [(ngModel)]="register.course" name="course">
+                                                                                        </div>
+                                                                                </div>  
+                                                                                <div class="col-sm-6">    
+                                                                                        <div class = "form-group">
+                                                                                                <label for = " branch"> Branch:  </label>
+                                                                                                <input type = "text" class = "form-control"  [(ngModel)]="register.branch" name="branch">
+                                                                                        </div>
+                                                                                </div> 
+                                                                        </div>  
+                                                                        <div class="row">
+                                                                                <div class="col-sm-6">     
+                                                                                        <div class = "form-group">
+                                                                                                <label for = "year"> Year:  </label>
+                                                                                                <input type = "text" class = "form-control"  [(ngModel)]="register.year" name="year">
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                        <div class = "form-group">
+                                                                                                <label for = "register_date"> Register Date:  </label>
+                                                                                                <input type = "date" class = "form-control"  [(ngModel)]="register.register_date" name="register_date">
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                                <div class="col-sm-6">
+                                                                                        <div class = "form-group">
+                                                                                                <label for = "amount_paid"> Amount Paid:  </label>
+                                                                                                <input type = "text" id = "amount_paid" class = "form-control"  [(ngModel)]="register.amount_paid" name="amount_paid">
+                                                                                        </div>
+                                                                                </div>   
+                                                                                <div class="col-sm-6">
+                                                                                        <div class = "form-group">
+                                                                                                <label for = "shortlist_status"> Shortlist Status:  </label>
+                                                                                                <input type = "text" id = "shortliststatus" class = "form-control"  [(ngModel)]="register.shortlist_status" name="shortlist_status">
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="row">  
+                                                                                <div class=col-sm-6>        
+                                                                                        <div class = "form-group">
+                                                                                                <label for = "ticket_id"> Ticket Id:  </label>
+                                                                                                <input type = "text" class = "form-control"  [(ngModel)]="register.ticket_id" name="ticket_id">
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class=col-sm-6> 
+                                                                                        <div class = "form-group">
+                                                                                                <label for = "registration_type"> Registration Type:  </label>
+                                                                                                <input type = "text" class = "form-control"  [(ngModel)]="register.registration_type" name="registration_type">
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                                <div class="col-sm-6">         
+                                                                                        <div class = "form-group">
+                                                                                                <label for = "event"> Event:  </label>
+                                                                                                <input type = "text"  class = "form-control" [(ngModel)]="register.event.id" name="event">
+                                                                                        </div>
+                                                                                </div> 
+                                                                                <div class=col-sm-6> 
+                                                                                        <div class = "form-group">
+                                                                                                <label for = "participant"> Participant:  </label>
+                                                                                                <input type = "text"  class = "form-control" [(ngModel)]="register.participant.id" name="participant">
+                                                                                        </div>
+                                                                                </div>    
+                                                                        </div>
+                                                                        <div class = "form-group">
+                                                                                <label for = "comments"> Comments:  </label>
+                                                                                <input type = "text" class = "form-control"  [(ngModel)]="register.comments" name="comments">
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-success" >Submit</button>
+                                </form>
+                        </div>
+                </section>
+        </div>
+                        
+            
+    
+        <div [hidden]="!submitted" align="center">
+                <h4>You submitted successfully!</h4>
+                
+        </div>
+        
+       

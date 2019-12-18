@@ -1,0 +1,85 @@
+<app-sidebar></app-sidebar>
+
+
+<div class="content-wrapper" style="min-height: 1416.81px;">
+    <section class="content-header">
+            <div class="container-fluid">
+                    <div class="row mb-2">
+                            <div class="col-sm-6">
+                                    <h1></h1>
+                            </div>
+                            
+                    </div>
+            </div>
+    </section>
+    <section class="content">
+        <form (ngSubmit)="onSubmit()">
+            <div [hidden]="submitted">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-info">
+                            <div class="card-header">
+                                <h3 class="card-title">Events 
+                                    <select style="color: black;">                                    
+                                        <option *ngFor=" let event of event">{{event.title}}</option>
+                                    </select>
+                                </h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">-
+                                        </button>
+                                    </div>
+                            </div>
+                                                                                    
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card-tools" align="right">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>s.no</th>
+                                                        <th>Event Feedback</th>
+                                                        <th>Sessions</th>
+                                                        <th>Helpfull</th>
+                                                        <th>Key Learned</th>
+                                                        <th>Logistics</th>
+                                                        <th>Feedback For Logistics</th>
+                                                        <th>Comments</th>
+                                                        <th>Suggestions</th>
+                                                    </tr>
+                                                    <tr></tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr *ngFor="let feedback of feedback, let i=index">
+                                                        <td>{{i+1}}</td>
+                                                        <td>{{feedback.event_feedback}}</td>
+                                                        <td>{{feedback.sessions.session1}}</td>
+                                                        <td>{{feedback.helpfull}}</td>
+                                                        <td>{{feedback.key_learned}}</td>
+                                                        <td>{{feedback.logistics.transportation}}</td>
+                                                        <td>{{feedback.feedback_logistics}}</td>
+                                                        <td>{{feedback.comments}}</td>
+                                                        <td>{{feedback.suggestions}}</td>
+                                                            
+                                                    </tr>
+                                                          
+                                                </tbody>
+                                            </table>
+                                            
+                                        </div>
+                                            
+                                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+</div>
+
+
+
+                                                       

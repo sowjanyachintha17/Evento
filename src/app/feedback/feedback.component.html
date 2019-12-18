@@ -1,0 +1,229 @@
+    
+    <section class="content" style="margin-left: 25rem;">
+        <form (ngSubmit)="onSubmit()" class="input">
+            <div [hidden]="submitted">
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-8">
+                        <div class="card ">
+                            <div class="card-header">
+                                <h3 class="card-title" ></h3>
+                                <h4 align="center"> Event Feedback Form</h4>
+                            </div>                                                                   
+                            <div class="card-body" style="margin:2px;">
+                                <p>Thank you for participating in our event. We hope you had as much fun attending as we did organizing it.
+                                    We want to hear your feedback so we can keep improving our content. 
+                                    Please fill this quick survey and let us know your thoughts (your answers will be anonymous).
+                                </p>
+                                <div class="row" style="margin: 2px;">
+                                    <div class="form-group">
+                                        <label for name="event_feedback">How Satisfied were you with the event?</label>
+                                        <select  [(ngModel)]="feedback.event_feedback" class="form-control" name="event_feedback">
+                                            <option>Excellent</option>
+                                            <option>Good</option>
+                                            <option>Average</option>
+                                            <option>Not Bad</option>
+                                            <option>Poor</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row" style="margin: 2px;">
+                                    <div class="form-group">
+                                        <label for name="helpfull">How relevant and helpful do you think it was for your carrer?</label>
+                                        <select  [(ngModel)]="feedback.helpfull" class="form-control" name="helpfull">
+                                            <option>Excellent</option>
+                                            <option>Good</option>
+                                            <option>Average</option>
+                                            <option>Not Bad</option>
+                                            <option>Poor</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row" style="margin: 2px;">
+                                    <div class="form-group">
+                                        <label>What were your key take aways from this event?</label>
+                                        <input type="text" class="input" [(ngModel)]="feedback.key_learned" name="key_learned"> 
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <div class="row" style="margin: 2px;">
+                                        <label>How satisfied were you with the logistics?</label> 
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="accommodation" class="label">Accommodation</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.accommodation" name="accommodation" value="Excellent"> Excellent
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.accommodation" name="accommodation" value="Good"> Good   
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.accommodation" name="accommodation" value="Average"> Average
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.accommodation" name="accommodation" value="Poor"> Poor                                    
+                                        
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="welcome_kit" class="label">Welcome Kit</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.welcome_kit" name="welcome_kit" value="Excellent"> Excellent
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.welcome_kit" name="welcome_kit" value="Good"> Good   
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.welcome_kit" name="welcome_kit" value="Average"> Average
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.welcome_kit" name="welcome_kit" value="Poor"> Poor                                    
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="communication" class="label">Communication</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.communication" name="communication" value="Excellent"> Excellent
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.communication" name="communication" value="Good"> Good   
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.communication" name="communication" value="Average"> Average
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.communication" name="communication" value="Poor"> Poor                                    
+                                        
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="transportation" class="label">Transportation</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.transportation" name="transportation" value="Excellent"> Excellent
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.transportation" name="transportation" value="Good"> Good   
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.transportation" name="transportation" value="Average"> Average
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.transportation" name="transportation" value="Poor"> Poor                                    
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="welcome_activity" class="label">Welcome Activity</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.welcome_activity" name="welcome_activity" value="Excellent"> Excellent
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.welcome_activity" name="welcome_activity" value="Good"> Good   
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.welcome_activity" name="welcome_activity" value="Average"> Average
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.welcome_activity" name="welcome_activity" value="Poor"> Poor                                    
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="venue" class="label">Venue</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.venue" name="venue" value="Excellent"> Excellent
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.venue" name="venue" value="Good"> Good   
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.venue" name="venue" value="Average"> Average
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.venue" name="venue" value="Poor"> Poor                                    
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="activities" class="label">Activities</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.activities" name="activities" value="Excellent"> Excellent
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.activities" name="activities" value="Good"> Good   
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.activities" name="activities" value="Average"> Average
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.activities" name="activities" value="Poor"> Poor                                    
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="closing_ceremony" class="label">Closing Ceremony</label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.closing_ceremony" name="closing_ceremony" value="Excellent"> Excellent
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.closing_ceremony" name="closing_ceremony" value="Good"> Good   
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.closing_ceremony" name="closing_ceremony" value="Average"> Average
+                                            <input type="radio" class="input" [(ngModel)]="feedback.logistics.closing_ceremony" name="closing_ceremony" value="Poor"> Poor                                    
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row" style="margin: 2px;">
+                                    <div class="form-group">
+                                        <label>Additional feedback on logistics</label>
+                                        <input type="text" class="input" [(ngModel)]="feedback.feedback_logistics" name="logistics" > 
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row" style="margin: 2px;">
+                                    <label>Which sessions did you find most relevant?</label>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="welcome_activity" class="label">Welcome Activity</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="radio" class="input" [(ngModel)]="feedback.sessions.welcome_activity" name="welcome_activity" value="Excellent"> Excellent
+                                        <input type="radio" class="input" [(ngModel)]="feedback.sessions.welcome_activity" name="welcome_activity" value="Good"> Good   
+                                        <input type="radio" class="input" [(ngModel)]="feedback.sessions.welcome_activity" name="welcome_activity" value="Average"> Average
+                                        <input type="radio" class="input" [(ngModel)]="feedback.sessions.welcome_activity" name="welcome_activity" value="Poor"> Poor                                    
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="welcome_activity" class="label">Session 1</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="radio" class="input" [(ngModel)]="feedback.sessions.session1" name="session1" value="Excellent"> Excellent
+                                        <input type="radio" class="input" [(ngModel)]="feedback.sessions.session1" name="session1" value="Good"> Good   
+                                        <input type="radio" class="input" [(ngModel)]="feedback.sessions.session1" name="session1" value="Average"> Average
+                                        <input type="radio" class="input" [(ngModel)]="feedback.sessions.session1" name="session1" value="Poor"> Poor                                    
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="welcome_activity" class="label">Session 2</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="radio" class="input" [(ngModel)]="feedback.sessions.session2" name="session2" value="Excellent"> Excellent
+                                        <input type="radio" class="input" [(ngModel)]="feedback.sessions.session2" name="session2" value="Good"> Good   
+                                        <input type="radio" class="input" [(ngModel)]="feedback.sessions.session2" name="session2" value="Average"> Average
+                                        <input type="radio" class="input" [(ngModel)]="feedback.sessions.session2" name="session2" value="Poor"> Poor                                    
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="welcome_activity" class="label">Closing Activity</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="radio" class="input" [(ngModel)]="feedback.sessions.closing_activity" name="session2" value="Excellent"> Excellent
+                                        <input type="radio" class="input" [(ngModel)]="feedback.sessions.closing_activity" name="session2" value="Good"> Good   
+                                        <input type="radio" class="input" [(ngModel)]="feedback.sessions.closing_activity" name="session2" value="Average"> Average
+                                        <input type="radio" class="input" [(ngModel)]="feedback.sessions.closing_activity" name="session2" value="Poor"> Poor                                    
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row" style="margin: 2px;">
+                                    <div class="form-group">
+                                        <label>Any additional comments regarding the sessions</label>
+                                        <input type="text" class="input" [(ngModel)]="feedback.comments"  name="comments"> 
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row" style="margin: 2px;">
+                                    <div class="form-group">
+                                        <label>Any suggestions for an event</label>
+                                        <input type="text" class="input" [(ngModel)]="feedback.suggestions" name="suggestions"> 
+                                    </div>
+                                </div>
+                                <hr>
+                                <button type="submit" class="btn btn-success" >Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+                                                    
