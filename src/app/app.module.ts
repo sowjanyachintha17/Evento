@@ -20,6 +20,7 @@ import { MatTableModule } from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { GetfeedbackComponent } from './getfeedback/getfeedback.component';
+import { GmapComponent } from './frontpage/gmap/gmap.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { GetfeedbackComponent } from './getfeedback/getfeedback.component';
     ListofeventsComponent,
     AttendanceComponent,
     FeedbackComponent,
-    GetfeedbackComponent
+    GetfeedbackComponent,
+    GmapComponent
    
    
   ],
