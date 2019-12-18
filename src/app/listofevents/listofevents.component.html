@@ -1,0 +1,39 @@
+
+
+<table border="0" style="width:50%" align="center">
+    
+<tbody>
+        <tr *ngFor=" let event of event; let i = index;"  >
+
+         <td>
+                 <img src="../assets/events/{{i+1}}.jpg" style="width:150px; height:100px">
+         </td>    
+         <td> {{event.title}}<br>
+          {{event.event_type}},
+          {{event.event_category}}<br>
+          {{event.day}}
+        </td>
+        <td>
+                <button class="btn btn-primary">Register Here</button>
+
+                
+</tbody>
+ 
+</table>
+
+<!-- <div class="gallery"  style="width:80%" align="left">
+      <div  *ngFor=" let event of event; let i = index;">
+        <a >
+                <img src="../assets/events/{{i+1}}.jpg" alt="images" style="width:150px; height:120px">
+        </a> 
+      
+        <div class="desc">
+                {{event.title}}<br>
+                {{event.event_type}},
+                {{event.event_category}}<br>
+                {{event.day}}<br>
+                <button class="btn btn-primary">Register Here</button>
+        </div>
+      </div>
+</div> -->
+
