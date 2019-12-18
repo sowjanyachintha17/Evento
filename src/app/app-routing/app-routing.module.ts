@@ -14,6 +14,7 @@ import { ListofeventsComponent } from '../listofevents/listofevents.component';
 import { AttendanceComponent } from '../attendance/attendance.component';
 import { FeedbackComponent } from '../feedback/feedback.component';
 import { GetfeedbackComponent } from '../getfeedback/getfeedback.component';
+import { GmapComponent } from '../frontpage/gmap/gmap.component';
 
 const routes: Routes = [
   {
@@ -33,7 +34,8 @@ const routes: Routes = [
   { path: 'listofevents', component: ListofeventsComponent },
   { path: 'attendance', component: AttendanceComponent },
   { path: 'feedback', component: FeedbackComponent },
-  { path: 'getfeedback', component: GetfeedbackComponent }
+  { path: 'getfeedback', component: GetfeedbackComponent },
+   { path: 'gmap', component: GmapComponent} 
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
