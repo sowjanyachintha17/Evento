@@ -1,0 +1,39 @@
+<app-sidebar></app-sidebar>
+
+ <h3 style= "text-align:left ; width:60%"><b >User's Data</b></h3>
+
+  <table border="1" style="width:80%" align="right" >
+ 
+    <tr>
+       <th>S.No</th>
+      <th>first_name</th>
+      <th>last_name</th>
+      <th>gender</th>
+      <th>email</th>
+      <th>phone_no</th>
+      <th>address</th> 
+   
+    </tr>
+    <tbody>
+      <tr *ngFor=" let user of user; let i = index;"  >
+
+        <td>{{ i+1  }}</td> 
+        <td>{{user.first_name}}</td>
+        <td>{{user.last_name}}</td>
+        <td>{{user.gender}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.phone_no}}</td>
+       
+        <td>{{user.address.door_no}},
+        {{user.address.building_name}}<br>
+        {{user.address.street}},
+        {{user.address.locality}}<br>
+        {{user.address.landmark}},
+        {{user.address.state}}<br>
+        {{user.address.city}},
+        {{user.address.pincode}}<br></td> 
+      </tr>
+    </tbody>
+  </table> 
+
+
