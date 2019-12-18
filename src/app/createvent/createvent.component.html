@@ -1,0 +1,234 @@
+  
+<app-sidebar></app-sidebar>
+
+<div class="content-wrapper" style="min-height: 1416.81px;">
+        <section class="content-header">
+                <div class="container-fluid">
+                        <div class="row mb-2">
+                                <div class="col-sm-6">
+                                        <h1>Event Creation</h1>
+                                </div>
+                                
+                        </div>
+                </div>
+        </section>
+        <section class="content">
+                <form (ngSubmit)="onSubmit()">
+                        <div [hidden]="submitted">
+                                <div class="row">
+                                        <div class="col-md-6">
+                                                <div class="card card-primary">
+                                                        <div class="card-header">
+                                                                <h3 class="card-title">Event Details</h3>
+                                                                <div class="card-tools">
+                                                                        <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">-
+                                                                </button>
+                                                                </div>
+                                                        </div>
+                                                                                        
+                                                        <div class="card-body">
+                                                        
+                                                                <div class="form-group">
+                                                                        <label for="even_title"> Event Title: </label>
+                                                                        <input type="text" class="form-control" [(ngModel)]="event.title"
+                                                                                name="title">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label for="event-category"> Event Category: </label>
+                                                                        <input type="text" class="form-control"
+                                                                                [(ngModel)]="event.event_category" name="event_category">
+                                                                </div>
+                                        
+                                                                <div class="form-group">
+                                                                        <label for="organizer_name"> Organizer Name: </label>
+                                                                        <input type="text" class="form-control"
+                                                                                [(ngModel)]="event.organizer_name" name="organizer_name">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label for="event-type"> Event Type: </label>
+                                                                        <input type="text" class="form-control" [(ngModel)]="event.event_type"
+                                                                                name="event_type">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label for="summary"> Summary: </label>
+                                                                        <input type="text" class="form-control" [(ngModel)]="event.summary"
+                                                                                name="summary">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label for="text"> Text: </label>
+                                                                        <input type="text" class="form-control" [(ngModel)]="event.text"
+                                                                                name="text">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label for="published"> Published: </label>
+                                                                        <input type="text" class="form-control" [(ngModel)]="event.published"
+                                                                                name="published">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label for="coordinates"> Coordinates: </label>
+                                                                        <input type="text" class="form-control" [(ngModel)]="coordinates"
+                                                                                name="coordinates">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label for="tags"> Tags: </label>
+                                                                        <input type="text" class="form-control" [(ngModel)]="tags" name="tags">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label for="owner"> Owner: </label>
+                                                                        <input type="text" class="form-control" [(ngModel)]="event.owner.id" name="owner" >
+                                                                </div>
+                                                                                                                                                 
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                                <div class="card card-primary">
+                                                        <div class="card-header">
+                                                                <h3 class="card-title">Address</h3>
+                                                                <div class="card-tools">
+                                                                        <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">-
+                                                                        </button>
+                                                                </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                                <div class="form-group">
+                                                                        <label for="venue"> Venue </label>
+                                                                        <div class="row">
+                                                                                <div class="col-sm-12">
+                                                                                        <input type="text" class="form-control"
+                                                                                                [(ngModel)]="event.venue.door_no" name="event.venue.door_no"
+                                                                                                placeholder="Door No"><br>
+                                                                                </div>
+                                                                        </div>
+
+                                                                        <div class="row">
+                                                                                <div class="col-sm-12">
+                                                                                        <input type="text" class="form-control"
+                                                                                                [(ngModel)]="event.venue.building_name"
+                                                                                                name="event.venue.building_noame"
+                                                                                                placeholder="Building Name"><br>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                                <div class="col-sm-12">
+                                                                                        <input type="text" class="form-control" [(ngModel)]="event.venue.street"
+                                                                                                        name="event.venue.street" placeholder="Street"><br>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                                <div class="col-sm-12">
+                                                                                        <input type="text" class="form-control"
+                                                                                                [(ngModel)]="event.venue.locality" name="event.venue.locality"
+                                                                                                placeholder="Locality"><br>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                                <div class="col-sm-12">
+                                                                                        <input type="text" class="form-control"
+                                                                                                [(ngModel)]="event.venue.landmark" name="event.venuelandmark"
+                                                                                                placeholder="Landmark"><br>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                                <div class="col-sm-6">
+                                                                                        <div class="form-group">
+                                                                                                <select [(ngModel)]="event.venue.city" class="form-control"
+                                                                                                        name="city">
+                                                                                                        <option>City</option>
+                                                                                                        <option>vizag</option>
+                                                                                                        <option>srikakulam</option>
+                                                                                                        <option>hyderabad</option>
+                                                                                                        <option>Patna</option>
+                                                                                                </select>
+                                                                                        </div>
+                                                                                </div>
+                                                                                <div class="col-sm-6">
+                                                                                        <div class="form-group">
+                                                                                                <select [(ngModel)]="event.venue.state" name="state"
+                                                                                                        class="form-control">
+                                                                                                        <option>State</option>
+                                                                                                        <option>Andhra Pradesh</option>
+                                                                                                        <option>Telangana</option>
+                                                                                                        <option>Bihar</option>
+                                                                                                </select>
+                                                                                        </div>
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                        <div class="col-sm-12">
+                                                                                <input type="text" class="form-control"
+                                                                                        [(ngModel)]="event.venue.pincode" name="pincode"
+                                                                                                placeholder="Pincode">
+                                                                        </div>
+                                                                         
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                                <div class="card card-primary">
+                                                        <div class="card-header">
+                                                                <h3 class="card-title">Details</h3>
+                                                                <div class="card-tools">
+                                                                        <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">-
+                                                                        </button>
+                                                                </div>
+                                                        </div>
+                                                        <div class="card-body">
+                                                                <div class="form-group">
+                                                                        <label for="event_start_date"> Event Start Date: </label>
+                                                                        <input type="date" class="form-control" [(ngModel)]="event.day"
+                                                                                name="day">
+                                                                                                        
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label for="event_last_date"> Event Last Date: </label>
+                                                                        <input type="date" class="form-control" [(ngModel)]="event.end_date"
+                                                                                name="end_date">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <div class="row">
+                                                                                <div class ="col-md-4">
+                                                                                        <label for="ticket_type"class="label">Ticket Type:</label>
+                                                                                </div>
+                                                                                <div class ="col-md-6">
+                                                                                        <input type="radio"class="input" [(ngModel)]="event.ticket_type" name="ticket_type"value="payment">Payment 
+                                                                                        <input type="radio"class="input" [(ngModel)]="event.ticket_type" name="ticket_type"value="free">Free
+                                                                                </div>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label for="number_of_tickets"> Number Of Tickets: </label>
+                                                                        <input type="text" class="form-control"
+                                                                                [(ngModel)]="event.number_of_tickets" name="number_of_tickets">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label for="ticket_type"> Ticket Price: </label>
+                                                                        <input type="text" class="form-control" [(ngModel)]="event.ticket_price"
+                                                                                name="ticket_price">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label for="registration_start_date"> Registration Start Date: </label>
+                                                                        <input type="date" class="form-control"
+                                                                                [(ngModel)]="event.register_start_date" name="register_start_date">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                        <label for="registration_end_date"> Registration End Date: </label>
+                                                                        <input type="date" class="form-control"
+                                                                                [(ngModel)]="event.register_end_date" name="register_end_date">
+                                                                </div>
+                                                        </div>
+                                                                                                                               
+                                                </div>
+                                        </div>
+                                                                             
+                                </div>
+                                <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+              </form>
+        </section>
+</div>
+<div [hidden]="!submitted" align="center">
+        <h4>You submitted successfully!</h4>
+</div>
