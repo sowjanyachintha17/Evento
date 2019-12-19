@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-// @Document to define a “collection name” when you save this object in mongodb.
+// @Document to define a “collection name” when you save this object in mongodb
 //In this case, when “event” object saves, it will save into “event” collection
 
 @Document(collection="event")
@@ -42,11 +42,11 @@ public class Event {
 	}
 	
 	//create constructor
-
 	public Event(String id, String title, String event_type, String event_category, String organizer_name, User owner,
 			Address venue, Date day, Date end_date, String summary, String text, String ticket_type,
 			int number_of_tickets, int ticket_price, Date register_start_date, Date register_end_date, String published,
-			List<Float> coordinates, List<String> tags) {
+			List<Float> coordinates, List<String> tags) 
+	{
 		super();
 		this.id = id;
 		this.title = title;
@@ -73,8 +73,6 @@ public class Event {
 	//create getter and setter method
 	//getter() reads the value of the variable
 	//setter() sets or update value for variable
-	
-	
 	public String getId() {
 		return id;
 	}
@@ -227,16 +225,5 @@ public class Event {
 		this.tags = tags;
 	}
 
-	
-//	@Override
-//	public String toString() {
-//		return "Event [id=" + id + ", event_title=" + event_title + ", event_type=" + event_type + ", event_category="
-//				+ event_category + ", organizer_name=" + organizer_name + ", user=" + user + ", venue=" + venue
-//				+ ", start_date=" + start_date + ", end_date=" + end_date + ", summary=" + summary + ", text=" + text
-//				+ ", ticket_type=" + ticket_type + ", number_of_tickets=" + number_of_tickets + ", ticket_price="
-//				+ ticket_price + ", register_start_date=" + register_start_date + ", register_end_date="
-//				+ register_end_date + ", published=" + published + ", coordinates=" + coordinates + ", tags=" + tags
-//				+ "]";
-//	}
 	
 }
